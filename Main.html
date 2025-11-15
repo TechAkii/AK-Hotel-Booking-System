@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking - Luxury Resort</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">AK</div>
+                <span>Hotel Booking</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#welcome-section">About Us</a></li>
+                    <li><a href="#rooms">Rooms</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#rooms">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social-login">
+                <i class="fab fa-facebook"> <a href=""></a></i>
+                <i class="fab fa-twitter"><a href=""></a></i>
+                <i class="fab fa-pinterest"><a href=""></a></i>
+                <i class="fab fa-google-plus"><a href=""></a></i>
+                <a href="#" class="login-btn">Login in / Sign up</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="slider">
+            <div class="slide active">
+                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1920" alt="Luxury Resort">
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920" alt="Hotel Pool">
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920" alt="Hotel Room">
+            </div>
+        </div>
+
+        <button class="arrow arrow-left" onclick="changeSlide(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="arrow arrow-right" onclick="changeSlide(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <div class="hero-content">
+            <h1>Welcome to Hotely</h1>
+            <p>The Place Where You Looking To</p>
+            <button class="explore-btn">Explore Now →</button>
+        </div>
+
+        <div class="booking-form">
+            <div class="form-group">
+                <label>E-mail <i class="fas fa-info-circle"></i></label>
+                <input type="email" placeholder="Please enter your E-mail">
+            </div>
+            <div class="form-group">
+                <label>Room Type <i class="fas fa-info-circle"></i></label>
+                <select>
+                    <option>Select a room</option>
+                    <option>Deluxe Room</option>
+                    <option>Suite</option>
+                    <option>Presidential Suite</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Check in <i class="fas fa-info-circle"></i></label>
+                <input type="date">
+            </div>
+            <div class="form-group">
+                <label>Check out <i class="fas fa-info-circle"></i></label>
+                <input type="date">
+            </div>
+            <div class="form-group">
+                <label>Guests</label>
+                <input type="number" value="1" min="1">
+            </div>
+            <button class="submit-btn">Book Now</button>
+        </div>
+    </section>
+
+    <section id="welcome-section">
+        <h2>Welcome to AK Hotel</h2>
+        <div class="decorative-line"></div>
+        <p>Welcome to <b>AK</b> Hotel, where comfort meets excellence. Our mission is to provide guests with an unforgettable experience through exceptional service, cozy accommodations, and a warm, welcoming atmosphere. Whether you’re here for business or leisure, <b>AK</b> Hotel ensures your stay is memorable.</p>
+
+      <div class="hotel-image-row">
+        <img src="https://images.pexels.com/photos/776538/pexels-photo-776538.jpeg?cs=srgb&dl=buffet-business-counter-776538.jpg&fm=jpg" alt="Image 1">
+        <img src="https://blogs-images.forbes.com/karlaalindahao/files/2015/01/The-Regency-Bar-Grill_Restaurants-in-New-York-City_Valentines-Day_Forbes-1940x1293.jpg" alt="Image 2">
+        <img src="https://static.vecteezy.com/system/resources/previews/033/941/233/non_2x/a-plate-of-spaghetti-with-meat-and-vegetables-ai-generated-free-photo.jpg" alt="Image 3">
+      </div>
+
+      <button class="btn-hotel" onclick="window.location.href='https://wallpapercave.com/wp/wp1874165.jpg';">View All</button>
+
+    </section>
+
+    <section id="rooms">
+      <h2>Luxury Awaits You</h2>
+      <p>
+        Indulge in luxury at AK Hotel. From cozy Deluxe Rooms to spacious Presidential Suites, every room promises relaxation, sophistication, and exceptional service.
+      </p>
+      <div class="room-image-row">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.-W3HCohVKPNn2-9hI-msjQHaGL?pid=Api&P=0&h=220" alt="Image 1">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.8WheytiXmc_KaU2L8lxx2QHaGP?pid=Api&P=0&h=220" alt="Image 2">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.D05sic07Orh145OduscTvQHaGO?pid=Api&P=0&h=220" alt="Image 3">
+        </div>
+        <div class="room-image-row">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.GUFjWz1k9Ftgpl8xymR_YwHaE8?pid=Api&P=0&h=220" alt="Image 4">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.-9VJfYCBPu_LNyEAcTKxAAHaFj?pid=Api&P=0&h=220" alt="Image 5">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.14bYup82l8n32PvufqFGZQHaEL?pid=Api&P=0&h=220" alt="Image 6">
+      </div>
+
+      <div class="room-button-container">
+
+       <button class="btn-room" onclick="window.location.href='https://tse3.mm.bing.net/th/id/OIP.Qe9-c0BCcjou-oALrLbUGwHaE7?pid=Api&P=0&h=220';">
+        View All
+      </button>
+
+    </div>
+    </section>
+
+    <footer>
+        &copy; 2025 AK Hotel. All Rights Reserved.
+    </footer>
+
+
+
+
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            showSlide(currentSlide + direction);
+        }
+
+
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+
+        const today = new Date().toISOString().split('T')[0];
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        const tomorrowStr = tomorrow.toISOString().split('T')[0];
+        
+        document.querySelectorAll('input[type="date"]')[0].value = today;
+        document.querySelectorAll('input[type="date"]')[1].value = tomorrowStr;
+    </script>
+
+
+</body>
+
+</html>

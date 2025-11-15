@@ -1,0 +1,478 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+
+ }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    background-color: #f4f4f4; /* light gray for the whole page */
+    color: #333;
+}
+
+
+ header {
+     position: fixed;
+     top: 0;
+     width: 100%;
+     z-index: 1000;
+     background: rgba(0, 0, 0, 0.3);
+     backdrop-filter: blur(10px);
+ }
+
+ .header-container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 15px 50px;
+ }
+
+ .logo {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     color: white;
+     font-size: 20px;
+     font-weight: bold;
+ }
+
+ .logo-icon {
+     width: 40px;
+     height: 40px;
+     background: white;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #e91e63;
+     font-weight: bold;
+ }
+
+ nav ul {
+     display: flex;
+     list-style: none;
+     gap: 30px;
+     align-items: center;
+ }
+
+ nav a {
+     color: white;
+     text-decoration: none;
+     transition: color 0.3s;
+     font-size: 14px;
+     text-transform: uppercase;
+ }
+
+ nav a:hover {
+     color: #e91e63;
+ }
+
+ .book-btn {
+     background: #e91e63;
+     color: white;
+     padding: 12px 30px;
+     border: none;
+     cursor: pointer;
+     font-size: 14px;
+     text-transform: uppercase;
+     font-weight: bold;
+     transition: background 0.3s;
+ }
+
+ .book-btn:hover {
+     background: #c2185b;
+ }
+
+ .social-login {
+     display: flex;
+     gap: 15px;
+     align-items: center;
+ }
+
+ .social-login i {
+     color: white;
+     cursor: pointer;
+     transition: color 0.3s;
+ }
+
+ .social-login i:hover {
+     color: #e91e63;
+ }
+
+ .login-btn {
+     background: white;
+     color: #333;
+     padding: 8px 20px;
+     border-radius: 5px;
+     text-decoration: none;
+     font-size: 13px;
+ }
+
+ #hero {
+     position: relative;
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     overflow: hidden;
+ }
+
+ .slider {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+ }
+
+ .slide {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     opacity: 0;
+     transition: opacity 1s ease-in-out;
+ }
+
+ .slide.active {
+     opacity: 1;
+ }
+
+ .slide img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ .slide::after {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.4);
+ }
+
+ .hero-content {
+     position: relative;
+     z-index: 2;
+     text-align: center;
+     color: white;
+     padding: 0 20px;
+ }
+
+ .hero-content h1 {
+     font-family: 'Georgia', serif;
+     font-size: 72px;
+     font-weight: 300;
+     margin-bottom: 20px;
+     font-style: italic;
+ }
+
+ .hero-content p {
+     font-size: 18px;
+     letter-spacing: 3px;
+     margin-bottom: 40px;
+     text-transform: uppercase;
+ }
+
+ .explore-btn {
+     background: transparent;
+     border: 2px solid white;
+     color: white;
+     padding: 15px 40px;
+     font-size: 14px;
+     cursor: pointer;
+     transition: all 0.3s;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+ }
+
+ .explore-btn:hover {
+     background: white;
+     color: #333;
+ }
+
+ .arrow {
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     background: rgba(255, 255, 255, 0.3);
+     border: none;
+     color: white;
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     cursor: pointer;
+     font-size: 20px;
+     transition: background 0.3s;
+     z-index: 3;
+ }
+
+ .arrow:hover {
+     background: rgba(255, 255, 255, 0.5);
+ }
+
+ .arrow-left {
+     left: 30px;
+ }
+
+ .arrow-right {
+     right: 30px;
+ }
+
+ .booking-form {
+     position: absolute;
+     bottom: 50px;
+     left: 50%;
+     transform: translateX(-50%);
+     background: white;
+     padding: 30px;
+     border-radius: 10px;
+     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+     z-index: 3;
+     display: flex;
+     gap: 20px;
+     flex-wrap: wrap;
+     max-width: 1200px;
+     width: 90%;
+ }
+
+ .form-group {
+     flex: 1;
+     min-width: 150px;
+ }
+
+ .form-group label {
+     display: flex;
+     align-items: center;
+     gap: 5px;
+     font-size: 13px;
+     color: #666;
+     margin-bottom: 8px;
+     font-weight: 500;
+ }
+
+ .form-group input,
+ .form-group select {
+     width: 100%;
+     padding: 12px;
+     border: 1px solid #ddd;
+     border-radius: 5px;
+     font-size: 14px;
+ }
+
+ .form-group i {
+     color: #999;
+     font-size: 12px;
+ }
+
+ .submit-btn {
+     background: #e91e63;
+     color: white;
+     padding: 12px 40px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     font-size: 14px;
+     text-transform: uppercase;
+     font-weight: bold;
+     align-self: flex-end;
+ }
+
+ .submit-btn:hover {
+     background: #c2185b;
+ }
+
+
+ #welcome-section {
+     padding: 80px 50px;
+     text-align: center;
+ }
+
+ #welcome-section h2 {
+     font-size: 36px;
+     color: #333;
+     margin-bottom: 20px;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     text-shadow: 1px 1px 2px navy;
+ }
+ 
+
+
+ .decorative-line {
+     width: 200px;
+     height: 2px;
+     background: #e91e63;
+     margin: 20px auto;
+     position: relative;
+ }
+
+ .decorative-line::before,
+ .decorative-line::after {
+     content: '';
+     position: absolute;
+     width: 10px;
+     height: 10px;
+     background: #e91e63;
+     border-radius: 50%;
+     top: -4px;
+ }
+
+ .decorative-line::before {
+     left: -20px;
+ }
+
+ .decorative-line::after {
+     right: -20px;
+ }
+
+ #welcome-section p {
+     color: #666;
+     line-height: 1.8;
+     max-width: 800px;
+     margin: 0 auto;
+ }
+
+ @media (max-width: 768px) {
+     .header-container {
+         padding: 15px 20px;
+     }
+
+     nav ul {
+         gap: 15px;
+     }
+
+     .hero-content h1 {
+         font-size: 42px;
+     }
+
+     .booking-form {
+         bottom: 20px;
+         padding: 20px;
+     }
+
+     .form-group {
+         min-width: 100%;
+     }
+
+     .arrow {
+         width: 40px;
+         height: 40px;
+         font-size: 16px;
+     }
+ }
+
+ .hotel-image-row {
+     display: flex;
+     justify-content: space-between;
+     gap: 20px;
+     margin: 20px 0;
+ }
+
+ .hotel-image-row img {
+     width: 32%;
+     height: auto;
+     border-radius: 8px;
+ }
+ @media screen and (max-width: 768px) {
+  .hotel-image-row {
+    flex-direction: column;
+  }
+
+  .hotel-image-row img {
+    width: 100%;
+  }
+}
+
+.btn-hotel {
+  padding: 12px 25px;
+  background-color: #e42222; 
+  color: white;               
+  border: none;              
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 6px;         
+  cursor: pointer;
+  transition: 0.3s;           
+}
+
+.btn-hotel:hover {
+  background-color: #f90404; 
+}
+
+.room-image-row {
+    display: flex;
+    justify-content: center; 
+    gap: 10px; 
+    margin: 20px 0;
+    flex-wrap: wrap; 
+}
+
+.room-image-row img {
+    width: 20%; 
+    height: auto;
+    border-radius: 8px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .room-image-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .room-image-row img {
+        width: 100%; /
+    }
+}
+
+
+.room-button-container {
+    text-align: center; 
+    margin-top: 20px;   
+}
+
+.btn-room {
+    padding: 12px 25px;
+    background-color: #e42222; 
+    color: white;               
+    border: none;              
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;         
+    cursor: pointer;
+    transition: 0.3s;  
+}
+
+.btn-room:hover {
+    background-color: #f90404; 
+}
+
+#rooms h2 {
+     font-size: 36px;
+     color: #333;
+     margin-bottom: 20px;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     text-align: center;
+     text-shadow: 1px 1px 2px navy;
+ }
+ #rooms p {
+     color: #666;
+     line-height: 1.8;
+     max-width: 800px;
+     margin: 0 auto;
+     text-align: center;
+ }
+ footer {
+    background-color: rgb(79, 76, 76);
+    color: #e63131;
+    border: 1px solid #666;
+    height: auto;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0;
+    margin: 10px 0px 0px 0px;
+}
